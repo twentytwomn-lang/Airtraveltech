@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contact Us</title>
+        <link href="css/output.css" rel="stylesheet" />
+    </head>
+    <body class="flex flex-col min-h-screen">
+        <!-- Navbar (white/relative for inner pages) -->
+        <div
+            class="top-0 left-0 w-full z-20 relative bg-white shadow-sm text-gray-800"
+        >
+            <div class="flex items-center justify-between px-6 py-4 md:hidden">
+                <img src="images/US-logo2.png" alt="Logo" class="h-16 w-auto" />
+                <button id="menu-btn" class="text-3xl focus:outline-none">
+                    &#9776;
+                </button>
+            </div>
+            <div
+                id="mobile-menu"
+                class="hidden md:hidden bg-white shadow-md px-6 py-4 space-y-4"
+            >
+                <ul class="flex flex-col text-black text-lg space-y-3">
+                    <li>
+                        <a href="index.html" class="hover:text-blue-600"
+                            >Home</a
+                        >
+                    </li>
+                    <li>
+                        <a href="about.html" class="hover:text-blue-600"
+                            >About</a
+                        >
+                    </li>
+                    <li>
+                        <a href="contact.html" class="hover:text-blue-600"
+                            >Contact</a
+                        >
+                    </li>
+                </ul>
+                <button class="btn btn-primary w-full mt-3 open-booking">
+                    Book Your Trip Now
+                </button>
+            </div>
+            <div
+                class="hidden md:flex items-center justify-center px-8 py-8 relative"
+            >
+                <div class="absolute left-8">
+                    <img src="images/US-logo2.png" alt="Logo" class="h-20" />
+                </div>
+                <nav>
+                    <ul class="flex space-x-6 text-lg text-gray-800">
+                        <li>
+                            <a
+                                href="index.html"
+                                class="hover:text-blue-600 text-3xl"
+                                >Home</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="about.html"
+                                class="hover:text-blue-600 text-3xl"
+                                >About</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="contact.html"
+                                class="hover:text-blue-600 text-3xl"
+                                >Contact</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- Booking Modal -->
+            <div
+                id="booking-modal"
+                class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+            >
+                <div
+                    class="bg-white rounded-2xl shadow-lg p-6 w-11/12 max-w-md relative"
+                >
+                    <button
+                        id="close-booking"
+                        class="absolute top-2 right-3 text-2xl font-bold text-gray-500 hover:text-gray-700"
+                    >
+                        &times;
+                    </button>
+                    <h2 class="text-2xl font-semibold text-center mb-4">
+                        Book Your Trip
+                    </h2>
+                    <form id="booking-form" class="space-y-4">
+                        <input
+                            type="text"
+                            placeholder="Full Name"
+                            class="w-full border rounded-lg px-3 py-2"
+                            required
+                        />
+                        <input
+                            type="email"
+                            placeholder="Email"
+                            class="w-full border rounded-lg px-3 py-2"
+                            required
+                        />
+                        <input
+                            type="tel"
+                            placeholder="Phone"
+                            class="w-full border rounded-lg px-3 py-2"
+                            required
+                        />
+                        <input
+                            type="text"
+                            placeholder="From"
+                            class="w-full border rounded-lg px-3 py-2"
+                            required
+                        />
+                        <input
+                            type="text"
+                            placeholder="To"
+                            class="w-full border rounded-lg px-3 py-2"
+                            required
+                        />
+                        <button
+                            type="submit"
+                            class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700"
+                        >
+                            Submit
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <main class="grow">
+            <div class="min-h-screen flex flex-col lg:flex-row">
+                <!-- Left: Form -->
+                <div
+                    class="lg:w-1/2 w-full bg-white flex items-center justify-center"
+                >
+                    <div class="w-full max-w-md px-4 py-16">
+                        <h2 class="text-4xl font-bold mb-4">Contact Us</h2>
+                        <form class="space-y-6">
+                            <div class="flex gap-4">
+                                <input
+                                    type="email"
+                                    name="email"
+                                    placeholder="Enter a valid email address"
+                                    class="w-1/2 border-b border-gray-400 focus:outline-none focus:border-blue-500 pb-2"
+                                    required
+                                />
+                                <input
+                                    type="text"
+                                    name="name"
+                                    placeholder="Enter your Name"
+                                    class="w-1/2 border-b border-gray-400 focus:outline-none focus:border-blue-500 pb-2"
+                                    required
+                                />
+                            </div>
+                            <div class="flex gap-4">
+                                <input
+                                    type="tel"
+                                    name="phone"
+                                    placeholder="Enter your phone"
+                                    class="w-1/2 border-b border-gray-400 focus:outline-none focus:border-blue-500 pb-2"
+                                />
+                                <input
+                                    type="date"
+                                    name="date"
+                                    class="w-1/2 border-b border-gray-400 focus:outline-none focus:border-blue-500 pb-2"
+                                />
+                            </div>
+                            <textarea
+                                name="message"
+                                placeholder="Enter your message"
+                                rows="4"
+                                class="w-full border-b border-gray-400 focus:outline-none focus:border-blue-500 pb-2 resize-none"
+                                required
+                            ></textarea>
+                            <button
+                                type="submit"
+                                class="px-6 py-2 border border-black text-black font-semibold hover:bg-black hover:text-white transition-colors"
+                            >
+                                Submit
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <!-- Right: Image -->
+                <div class="lg:w-1/2 w-full flex items-center justify-center">
+                    <img
+                        src="images/airplane.webp"
+                        alt="Airplane Window"
+                        class="max-w-full max-h-[80vh] object-contain rounded-lg shadow-lg"
+                        loading="lazy"
+                    />
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 text-white px-6 md:px-20 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="space-y-4">
+                    <img
+                        src="images/US-logo2.png"
+                        alt="Logo"
+                        class="h-12 w-auto "
+                        loading="lazy"
+                    />
+                    <p class="text-gray-300 text-sm">
+                        We are a long-standing travel force, known for
+                        excellence. With 1000+ cities explored, our bucket list
+                        keeps growing. Our ultimate aim: crafting overseas
+                        memories with you.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-3">Legal</h3>
+                    <ul class="space-y-2 text-gray-300 text-sm">
+                        <li>
+                            <a href="privacy.html" class="hover:text-blue-400"
+                                >Privacy Policy</a
+                            >
+                        </li>
+                        <li>
+                            <a href="terms.html" class="hover:text-blue-400"
+                                >Terms of Service</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="payment-terms.html"
+                                class="hover:text-blue-400"
+                                >Payment Terms</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="cancellation-refund-policy.html"
+                                class="hover:text-blue-400"
+                                >Cancellation & Refund Policy</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="font-semibold mb-2">Contact</h3>
+                    <p
+                        class="text-gray-300 text-sm hover:text-blue-400 cursor-pointer"
+                    >
+                        4163 Swift Avenue, San Diego, CA, 92104
+                    </p>
+                    <p
+                        class="text-gray-300 text-sm hover:text-blue-400 cursor-pointer"
+                    >
+                        909-232-4008
+                    </p>
+                    <p
+                        class="text-gray-300 text-sm hover:text-blue-400 cursor-pointer"
+                    >
+                        TFN: (844) 934-8672
+                    </p>
+                    <p
+                        class="text-gray-300 text-sm hover:text-blue-400 cursor-pointer"
+                    >
+                        info@usaairtraveltech.com
+                    </p>
+                    <p
+                        class="text-gray-300 text-sm hover:text-blue-400 cursor-pointer"
+                    >
+                        www.usaairtraveltech.com
+                    </p>
+                </div>
+            </div>
+            <div class="mt-10 border-t border-gray-800 pt-6">
+                <p class="text-sm font-semibold text-white mb-4">
+                    We accept all major form of credit cards
+                </p>
+                <div class="flex flex-wrap items-center gap-6">
+                    <img
+                        src="images/amex.jpeg"
+                        alt="American Express"
+                        class="h-8 md:h-10 w-auto"
+                        loading="lazy"
+                    />
+                    <img
+                        src="images/master-card.jpeg"
+                        alt="Mastercard"
+                        class="h-8 md:h-10 w-auto"
+                        loading="lazy"
+                    />
+                    <img
+                        src="images/visa.jpeg"
+                        alt="Visa"
+                        class="h-8 md:h-10 w-auto"
+                        loading="lazy"
+                    />
+                    <img
+                        src="images/dn.jpeg"
+                        alt="Discover Network"
+                        class="h-8 md:h-10 w-auto"
+                        loading="lazy"
+                    />
+                    <img
+                        src="images/dci.jpeg"
+                        alt="Diners Club International"
+                        class="h-8 md:h-10 w-auto"
+                        loading="lazy"
+                    />
+                </div>
+            </div>
+        </footer>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>

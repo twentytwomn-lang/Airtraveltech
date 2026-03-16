@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Home</title>
+        
+     <link rel="stylesheet" href="css/output.css">
+    </head>
+    <body class="flex flex-col min-h-screen">
+        <!-- Navbar (transparent/absolute for homepage) -->
+        <div
+            class="top-0 left-0 w-full z-20 absolute bg-transparent text-white"
+        >
+            <!-- Mobile Navbar -->
+            <div class="flex items-center justify-between px-6 py-4 md:hidden">
+                <img src="images/US-logo2.png" alt="Logo" class="h-16 w-auto" />
+                <button id="menu-btn" class="text-3xl focus:outline-none">
+                    &#9776;
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div
+                id="mobile-menu"
+                class="hidden md:hidden bg-white shadow-md px-6 py-4 space-y-4"
+            >
+                <ul class="flex flex-col text-black text-lg space-y-3">
+                    <li>
+                        <a href="index.html" class="hover:text-blue-600"
+                            >Home</a
+                        >
+                    </li>
+                    <li>
+                        <a href="about.html" class="hover:text-blue-600"
+                            >About</a
+                        >
+                    </li>
+                    <li>
+                        <a href="contact.html" class="hover:text-blue-600"
+                            >Contact</a
+                        >
+                    </li>
+                </ul>
+                <button class="btn btn-primary w-full mt-3 open-booking">
+                    Book Your Trip Now
+                </button>
+            </div>
+            <!-- Desktop Navbar -->
+            <div
+                class="hidden md:flex items-center justify-center px-8 py-8 relative"
+            >
+                <!-- Left: Logo -->
+                <div class="absolute left-8">
+                    <img src="images/US-logo2.png" alt="Logo" class="h-20" />
+                </div>
+                <!-- Center: Navigation Links -->
+                <nav>
+                    <ul class="flex space-x-6 text-lg text-white">
+                        <li>
+                            <a
+                                href="index.html"
+                                class="hover:text-blue-600 text-3xl"
+                                >Home</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="about.html"
+                                class="hover:text-blue-600 text-3xl"
+                                >About</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="contact.html"
+                                class="hover:text-blue-600 text-3xl"
+                                >Contact</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- Booking Modal -->
+            <div
+                id="booking-modal"
+                class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+            >
+                <div
+                    class="bg-white rounded-2xl shadow-lg p-6 w-11/12 max-w-md relative"
+                >
+                    <button
+                        id="close-booking"
+                        class="absolute top-2 right-3 text-2xl font-bold text-gray-500 hover:text-gray-700"
+                    >
+                        &times;
+                    </button>
+                    <h2 class="text-2xl font-semibold text-center mb-4">
+                        Book Your Trip
+                    </h2>
+                    <form id="booking-form" class="space-y-4">
+                        <input
+                            type="text"
+                            placeholder="Full Name"
+                            class="w-full border rounded-lg px-3 py-2"
+                            required
+                        />
+                        <input
+                            type="email"
+                            placeholder="Email"
+                            class="w-full border rounded-lg px-3 py-2"
+                            required
+                        />
+                        <input
+                            type="tel"
+                            placeholder="Phone"
+                            class="w-full border rounded-lg px-3 py-2"
+                            required
+                        />
+                        <input
+                            type="text"
+                            placeholder="From"
+                            class="w-full border rounded-lg px-3 py-2"
+                            required
+                        />
+                        <input
+                            type="text"
+                            placeholder="To"
+                            class="w-full border rounded-lg px-3 py-2"
+                            required
+                        />
+                        <button
+                            type="submit"
+                            class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700"
+                        >
+                            Submit
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <main class="grow">
+            <!-- Hero Section -->
+            <div
+                class="relative w-full h-[60vh] sm:h-[80vh] md:h-screen bg-cover bg-center"
+                style="background-image: url(&quot;images/newbg.webp&quot;)"
+            >
+                <div class="absolute inset-0 bg-black/50"></div>
+                <div
+                    class="relative z-10 flex items-end justify-start h-full px-4 sm:px-8 md:px-16 pb-10 sm:pb-16 md:pb-20"
+                >
+                    <div class="max-w-lg text-left">
+                        <h1
+                            class="text-3xl sm:text-4xl md:text-5xl font-light text-white mb-3 sm:mb-4"
+                        >
+                            USA AIR Travel Tech One Mission
+                        </h1>
+                        <p
+                            class="text-base sm:text-lg md:text-2xl text-white mb-5 sm:mb-6"
+                        >
+                            Uniting People and Places across the Planet
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <a
+                                href="contact.html"
+                                class="bg-blue-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-md hover:bg-blue-700 transition"
+                            >
+                                Contact Us
+                            </a>
+                            <button
+                                id="open-modal"
+                                class="border border-white text-white px-4 sm:px-6 py-2 sm:py-3 rounded-md hover:bg-white hover:text-black transition"
+                            >
+                                Book Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Services Section -->
+            <section class="py-10 sm:py-14 md:py-16 bg-gray-50">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+                    <h2
+                        class="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4 sm:mb-6 text-center"
+                    >
+                        Our Services
+                    </h2>
+                    <p
+                        class="mb-8 sm:mb-12 text-gray-700 text-center max-w-3xl mx-auto"
+                    >
+                        We are committed to presenting the best services to make
+                        your travel smooth and enjoyable.
+                    </p>
+                    <div
+                        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+                    >
+                        <!-- Card 1 -->
+                        <div
+                            class="bg-white shadow-md rounded-lg overflow-hidden flex flex-col hover:shadow-lg transition"
+                        >
+                            <img
+                                src="images/air-ticket.webp"
+                                alt="Air Ticket Consolidation"
+                                class="w-full h-48 object-cover"
+                                loading="lazy"
+                            />
+                            <div class="p-4 flex flex-col flex-1">
+                                <h3
+                                    class="text-lg sm:text-xl font-semibold mb-2 text-gray-800"
+                                >
+                                    Air Ticket Consolidation
+                                </h3>
+                                <p
+                                    class="text-sm sm:text-base text-gray-600 flex-1"
+                                >
+                                    Affordable flights and seamless booking for
+                                    domestic and international routes.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div
+                            class="bg-white shadow-md rounded-lg overflow-hidden flex flex-col hover:shadow-lg transition"
+                        >
+                            <img
+                                src="images/personalised-map.webp"
+                                alt="Personalised Travel Packages"
+                                class="w-full h-48 object-cover"
+                                loading="lazy"
+                            />
+                            <div class="p-4 flex flex-col flex-1">
+                                <h3
+                                    class="text-lg sm:text-xl font-semibold mb-2 text-gray-800"
+                                >
+                                    Personalised Travel Packages
+                                </h3>
+                                <p
+                                    class="text-sm sm:text-base text-gray-600 flex-1"
+                                >
+                                    Tailor-made packages designed to match your
+                                    travel goals, style, and budget.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div
+                            class="bg-white shadow-md rounded-lg overflow-hidden flex flex-col hover:shadow-lg transition"
+                        >
+                            <img
+                                src="images/hassle-free.webp"
+                                alt="Hassle-Free Bookings"
+                                class="w-full h-48 object-cover"
+                                loading="lazy"
+                            />
+                            <div class="p-4 flex flex-col flex-1">
+                                <h3
+                                    class="text-lg sm:text-xl font-semibold mb-2 text-gray-800"
+                                >
+                                    Hassle-Free Bookings
+                                </h3>
+                                <p
+                                    class="text-sm sm:text-base text-gray-600 flex-1"
+                                >
+                                    From flights to hotels and activities, we
+                                    handle it all for you effortlessly.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Card 4 -->
+                        <div
+                            class="bg-white shadow-md rounded-lg overflow-hidden flex flex-col hover:shadow-lg transition"
+                        >
+                            <img
+                                src="images/24-7.webp"
+                                alt="24/7 Customer Support"
+                                class="w-full h-48 object-cover"
+                                loading="lazy"
+                            />
+                            <div class="p-4 flex flex-col flex-1">
+                                <h3
+                                    class="text-lg sm:text-xl font-semibold mb-2 text-gray-800"
+                                >
+                                    24/7 Customer Support
+                                </h3>
+                                <p
+                                    class="text-sm sm:text-base text-gray-600 flex-1"
+                                >
+                                    Round-the-clock assistance to ensure your
+                                    travel experience stays smooth.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Booking Modal (Hero) -->
+            <div
+                id="modal"
+                class="hidden fixed inset-0 bg-black/60 flex items-center justify-center z-50"
+            >
+                <div class="bg-white p-6 rounded-lg max-w-md w-full relative">
+                    <button
+                        id="close-modal"
+                        class="absolute top-3 right-3 text-gray-500 hover:text-black text-2xl"
+                    >
+                        &times;
+                    </button>
+                    <h2 class="text-2xl font-semibold mb-4 text-center">
+                        Book Your Trip
+                    </h2>
+                    <form class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium mb-1"
+                                >Name</label
+                            >
+                            <input
+                                type="text"
+                                name="name"
+                                class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                required
+                            />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-1"
+                                >Email</label
+                            >
+                            <input
+                                type="email"
+                                name="email"
+                                class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                required
+                            />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-1"
+                                >Destination</label
+                            >
+                            <input
+                                type="text"
+                                name="destination"
+                                class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-1"
+                                >Date</label
+                            >
+                            <input
+                                type="date"
+                                name="date"
+                                class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            />
+                        </div>
+                        <button
+                            type="submit"
+                            class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition"
+                        >
+                            Submit
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 text-white px-6 md:px-20 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="space-y-4">
+                    <img
+                        src="images/US-logo2.png"
+                        alt="Logo"
+                        class="h-12 w-auto "
+                        loading="lazy"
+                    />
+                    <p class="text-gray-300 text-sm">
+                        We are a long-standing travel force, known for
+                        excellence. With 1000+ cities explored, our bucket list
+                        keeps growing. Our ultimate aim: crafting overseas
+                        memories with you.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-3">Legal</h3>
+                    <ul class="space-y-2 text-gray-300 text-sm">
+                        <li>
+                            <a href="privacy.html" class="hover:text-blue-400"
+                                >Privacy Policy</a
+                            >
+                        </li>
+                        <li>
+                            <a href="terms.html" class="hover:text-blue-400"
+                                >Terms of Service</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="payment-terms.html"
+                                class="hover:text-blue-400"
+                                >Payment Terms</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="cancellation-refund-policy.html"
+                                class="hover:text-blue-400"
+                                >Cancellation & Refund Policy</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="font-semibold mb-2">Contact</h3>
+                    <p
+                        class="text-gray-300 text-sm hover:text-blue-400 cursor-pointer"
+                    >
+                        4163 Swift Avenue, San Diego, CA, 92104
+                    </p>
+                    <p
+                        class="text-gray-300 text-sm hover:text-blue-400 cursor-pointer"
+                    >
+                        909-232-4008
+                    </p>
+                    <p
+                        class="text-gray-300 text-sm hover:text-blue-400 cursor-pointer"
+                    >
+                        TFN: (844) 934-8672
+                    </p>
+                    <p
+                        class="text-gray-300 text-sm hover:text-blue-400 cursor-pointer"
+                    >
+                        info@usaairtraveltech.com
+                    </p>
+                    <p
+                        class="text-gray-300 text-sm hover:text-blue-400 cursor-pointer"
+                    >
+                        www.usaairtraveltech.com
+                    </p>
+                </div>
+            </div>
+            <div class="mt-10 border-t border-gray-800 pt-6">
+                <p class="text-sm font-semibold text-white mb-4">
+                    We accept all major form of credit cards
+                </p>
+                <div class="flex flex-wrap items-center gap-6">
+                    <img
+                        src="images/amex.jpeg"
+                        alt="American Express"
+                        class="h-8 md:h-10 w-auto"
+                        loading="lazy"
+                    />
+                    <img
+                        src="images/master-card.jpeg"
+                        alt="Mastercard"
+                        class="h-8 md:h-10 w-auto"
+                        loading="lazy"
+                    />
+                    <img
+                        src="images/visa.jpeg"
+                        alt="Visa"
+                        class="h-8 md:h-10 w-auto"
+                        loading="lazy"
+                    />
+                    <img
+                        src="images/dn.jpeg"
+                        alt="Discover Network"
+                        class="h-8 md:h-10 w-auto"
+                        loading="lazy"
+                    />
+                    <img
+                        src="images/dci.jpeg"
+                        alt="Diners Club International"
+                        class="h-8 md:h-10 w-auto"
+                        loading="lazy"
+                    />
+                </div>
+            </div>
+        </footer>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>

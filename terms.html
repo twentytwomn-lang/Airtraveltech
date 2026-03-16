@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Terms of Service</title>
+        <link href="css/output.css" rel="stylesheet" />
+    </head>
+    <body class="flex flex-col min-h-screen">
+        <!-- Navbar -->
+        <div
+            class="top-0 left-0 w-full z-20 relative bg-white shadow-sm text-gray-800"
+        >
+            <div class="flex items-center justify-between px-6 py-4 md:hidden">
+                <img src="images/US-logo2.png" alt="Logo" class="h-16 w-auto" />
+                <button id="menu-btn" class="text-3xl focus:outline-none">
+                    &#9776;
+                </button>
+            </div>
+            <div
+                id="mobile-menu"
+                class="hidden md:hidden bg-white shadow-md px-6 py-4 space-y-4"
+            >
+                <ul class="flex flex-col text-black text-lg space-y-3">
+                    <li>
+                        <a href="index.html" class="hover:text-blue-600"
+                            >Home</a
+                        >
+                    </li>
+                    <li>
+                        <a href="about.html" class="hover:text-blue-600"
+                            >About</a
+                        >
+                    </li>
+                    <li>
+                        <a href="contact.html" class="hover:text-blue-600"
+                            >Contact</a
+                        >
+                    </li>
+                </ul>
+                <button class="btn btn-primary w-full mt-3 open-booking">
+                    Book Your Trip Now
+                </button>
+            </div>
+            <div
+                class="hidden md:flex items-center justify-center px-8 py-8 relative"
+            >
+                <div class="absolute left-8">
+                    <img src="images/US-logo2.png" alt="Logo" class="h-20" />
+                </div>
+                <nav>
+                    <ul class="flex space-x-6 text-lg text-gray-800">
+                        <li>
+                            <a
+                                href="index.html"
+                                class="hover:text-blue-600 text-3xl"
+                                >Home</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="about.html"
+                                class="hover:text-blue-600 text-3xl"
+                                >About</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="contact.html"
+                                class="hover:text-blue-600 text-3xl"
+                                >Contact</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div
+                id="booking-modal"
+                class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+            >
+                <div
+                    class="bg-white rounded-2xl shadow-lg p-6 w-11/12 max-w-md relative"
+                >
+                    <button
+                        id="close-booking"
+                        class="absolute top-2 right-3 text-2xl font-bold text-gray-500 hover:text-gray-700"
+                    >
+                        &times;
+                    </button>
+                    <h2 class="text-2xl font-semibold text-center mb-4">
+                        Book Your Trip
+                    </h2>
+                    <form id="booking-form" class="space-y-4">
+                        <input
+                            type="text"
+                            placeholder="Full Name"
+                            class="w-full border rounded-lg px-3 py-2"
+                            required
+                        />
+                        <input
+                            type="email"
+                            placeholder="Email"
+                            class="w-full border rounded-lg px-3 py-2"
+                            required
+                        />
+                        <input
+                            type="tel"
+                            placeholder="Phone"
+                            class="w-full border rounded-lg px-3 py-2"
+                            required
+                        />
+                        <input
+                            type="text"
+                            placeholder="From"
+                            class="w-full border rounded-lg px-3 py-2"
+                            required
+                        />
+                        <input
+                            type="text"
+                            placeholder="To"
+                            class="w-full border rounded-lg px-3 py-2"
+                            required
+                        />
+                        <button
+                            type="submit"
+                            class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700"
+                        >
+                            Submit
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <main class="grow">
+            <div class="max-w-5xl mx-auto px-6 py-16 space-y-8">
+                <header class="mb-12">
+                    <h1 class="text-4xl font-bold text-gray-900 mb-2">
+                        Terms of Service
+                    </h1>
+                    <p class="text-gray-500">Effective date: November 2025</p>
+                </header>
+
+                <section class="space-y-4">
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        By hiring
+                        <span class="font-bold">USA Air Travel Tech</span> as
+                        your logistics partner, you agree to abide by the terms
+                        and conditions of the services mentioned on this site.
+                        Upon registering with us as your service provider, you
+                        will be considered to have reviewed all the service
+                        information and policies.
+                    </p>
+                </section>
+
+                <section class="space-y-4">
+                    <p class="text-gray-600 leading-relaxed">
+                        The chargeable payments required are processed through
+                        secured channels. You'll be liable for the taxes and
+                        fees associated with your bookings and reservations.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        We have no hidden charges. Refunds and cancellations
+                        will be processed depending on your travel package and
+                        our criteria.
+                    </p>
+                </section>
+
+                <section class="space-y-4">
+                    <h2 class="text-2xl font-semibold text-gray-800">
+                        Eligibility
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed">
+                        You must be at least 18 years old to use our services.
+                        By making a booking, you confirm that all information
+                        you provide is accurate, complete, and truthful. Parents
+                        or legal guardians are responsible for bookings made on
+                        behalf of minors.
+                    </p>
+                </section>
+
+                <section class="space-y-4">
+                    <h2 class="text-2xl font-semibold text-gray-800">
+                        Booking and Reservations
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed">
+                        All bookings are subject to availability at the time of
+                        confirmation. Once confirmed, you will receive an email
+                        with your travel itinerary and details. Any errors or
+                        discrepancies must be reported to us immediately.
+                    </p>
+                </section>
+
+                <section class="space-y-4">
+                    <h2 class="text-2xl font-semibold text-gray-800">
+                        Payments
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed">
+                        Payments must be made in full prior to the commencement
+                        of travel unless otherwise agreed in writing. We accept
+                        major credit cards, debit cards, and other secure
+                        payment methods. Failure to make timely payments may
+                        result in cancellation of your booking.
+                    </p>
+                </section>
+
+                <section class="space-y-4">
+                    <h2 class="text-2xl font-semibold text-gray-800">
+                        Cancellations & Refunds
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed">
+                        Cancellation requests must be submitted in writing via
+                        email. Refund eligibility will depend on the timing of
+                        your cancellation and the policies of our travel
+                        partners (airlines, hotels, etc.). Service fees are
+                        generally non-refundable.
+                    </p>
+                </section>
+
+                <section class="space-y-4">
+                    <h2 class="text-2xl font-semibold text-gray-800">
+                        Changes to Itinerary
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed">
+                        While we make every effort to honor your chosen
+                        itinerary, unforeseen circumstances such as weather,
+                        political instability, or natural disasters may require
+                        adjustments. We reserve the right to make changes while
+                        ensuring minimal disruption to your travel experience.
+                    </p>
+                </section>
+
+                <section class="space-y-4">
+                    <h2 class="text-2xl font-semibold text-gray-800">
+                        Liability
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed">
+                        USA Air Travel Tech acts as an intermediary between
+                        clients and third-party service providers. We are not
+                        liable for delays, cancellations, loss of personal
+                        belongings, injuries, or other issues outside of our
+                        control. Customers are strongly encouraged to purchase
+                        applicable insurance.
+                    </p>
+                </section>
+
+                <section class="space-y-4">
+                    <h2 class="text-2xl font-semibold text-gray-800">
+                        Intellectual Property
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed">
+                        All content, branding, logos, and materials on our
+                        website are the property of USA Air Travel Tech and are
+                        protected by applicable intellectual property laws.
+                        Unauthorized reproduction, distribution, or modification
+                        is prohibited.
+                    </p>
+                </section>
+
+                <section class="space-y-4">
+                    <h2 class="text-2xl font-semibold text-gray-800">
+                        User Conduct
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed">
+                        You agree not to use our website or services for
+                        unlawful purposes or to harm, harass, or exploit others.
+                        We reserve the right to deny service to any individual
+                        engaging in misconduct.
+                    </p>
+                </section>
+
+                <section class="space-y-4">
+                    <h2 class="text-2xl font-semibold text-gray-800">
+                        Third-Party Links
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed">
+                        Our site may contain links to third-party websites. We
+                        are not responsible for the content, policies, or
+                        practices of these websites and encourage you to review
+                        their terms independently.
+                    </p>
+                </section>
+
+                <section class="space-y-4">
+                    <h2 class="text-2xl font-semibold text-gray-800">
+                        Privacy
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed">
+                        Your use of our services is also governed by our
+                        <a
+                            href="privacy.html"
+                            class="text-blue-600 hover:underline"
+                            >Privacy Policy</a
+                        >, which outlines how we collect, use, and safeguard
+                        your personal information.
+                    </p>
+                </section>
+
+                <section class="space-y-4">
+                    <h2 class="text-2xl font-semibold text-gray-800">
+                        Governing Law
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed">
+                        These terms shall be governed by and interpreted in
+                        accordance with the laws of the jurisdiction in which
+                        USA Air Travel Tech operates. Any disputes shall be
+                        subject to the exclusive jurisdiction of local courts.
+                    </p>
+                </section>
+
+                <section class="space-y-4">
+                    <h2 class="text-2xl font-semibold text-gray-800">
+                        Amendments
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed">
+                        We reserve the right to update or modify these Terms of
+                        Service at any time. Changes will become effective once
+                        posted on this page. It is your responsibility to review
+                        the terms periodically.
+                    </p>
+                </section>
+
+                <section class="pt-6">
+                    <p class="text-gray-600 leading-relaxed font-medium">
+                        By using our services, you acknowledge that you have
+                        read, understood, and agreed to these Terms of Service.
+                    </p>
+                </section>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 text-white px-6 md:px-20 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="space-y-4">
+                    <img
+                        src="images/US-logo2.png"
+                        alt="Logo"
+                        class="h-12 w-auto "
+                        loading="lazy"
+                    />
+                    <p class="text-gray-300 text-sm">
+                        We are a long-standing travel force, known for
+                        excellence. With 1000+ cities explored, our bucket list
+                        keeps growing. Our ultimate aim: crafting overseas
+                        memories with you.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-3">Legal</h3>
+                    <ul class="space-y-2 text-gray-300 text-sm">
+                        <li>
+                            <a href="privacy.html" class="hover:text-blue-400"
+                                >Privacy Policy</a
+                            >
+                        </li>
+                        <li>
+                            <a href="terms.html" class="hover:text-blue-400"
+                                >Terms of Service</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="payment-terms.html"
+                                class="hover:text-blue-400"
+                                >Payment Terms</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="cancellation-refund-policy.html"
+                                class="hover:text-blue-400"
+                                >Cancellation & Refund Policy</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="font-semibold mb-2">Contact</h3>
+                    <p
+                        class="text-gray-300 text-sm hover:text-blue-400 cursor-pointer"
+                    >
+                        4163 Swift Avenue, San Diego, CA, 92104
+                    </p>
+                    <p
+                        class="text-gray-300 text-sm hover:text-blue-400 cursor-pointer"
+                    >
+                        909-232-4008
+                    </p>
+                    <p
+                        class="text-gray-300 text-sm hover:text-blue-400 cursor-pointer"
+                    >
+                        TFN: (844) 934-8672
+                    </p>
+                    <p
+                        class="text-gray-300 text-sm hover:text-blue-400 cursor-pointer"
+                    >
+                        info@usaairtraveltech.com
+                    </p>
+                    <p
+                        class="text-gray-300 text-sm hover:text-blue-400 cursor-pointer"
+                    >
+                        www.usaairtraveltech.com
+                    </p>
+                </div>
+            </div>
+            <div class="mt-10 border-t border-gray-800 pt-6">
+                <p class="text-sm font-semibold text-white mb-4">
+                    We accept all major form of credit cards
+                </p>
+                <div class="flex flex-wrap items-center gap-6">
+                    <img
+                        src="images/amex.jpeg"
+                        alt="American Express"
+                        class="h-8 md:h-10 w-auto"
+                        loading="lazy"
+                    />
+                    <img
+                        src="images/master-card.jpeg"
+                        alt="Mastercard"
+                        class="h-8 md:h-10 w-auto"
+                        loading="lazy"
+                    />
+                    <img
+                        src="images/visa.jpeg"
+                        alt="Visa"
+                        class="h-8 md:h-10 w-auto"
+                        loading="lazy"
+                    />
+                    <img
+                        src="images/dn.jpeg"
+                        alt="Discover Network"
+                        class="h-8 md:h-10 w-auto"
+                        loading="lazy"
+                    />
+                    <img
+                        src="images/dci.jpeg"
+                        alt="Diners Club International"
+                        class="h-8 md:h-10 w-auto"
+                        loading="lazy"
+                    />
+                </div>
+            </div>
+        </footer>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>
